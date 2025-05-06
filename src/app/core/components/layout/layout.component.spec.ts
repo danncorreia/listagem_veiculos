@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutService } from '../../services/layout.service';
+import { LoadingService } from '../../services/loading.service';
 import { LayoutComponent } from './layout.component';
 
 describe('LayoutComponent', () => {
@@ -7,8 +9,23 @@ describe('LayoutComponent', () => {
   let fixture: ComponentFixture<LayoutComponent>;
 
   beforeEach(async () => {
+    const layoutServiceSpy = jasmine.createSpyObj('LayoutService', ['isOppened', 'isMobile']);
+    layoutServiceSpy.isOppened.and.returnValue(true);
+    layoutServiceSpy.isMobile.and.returnValue(false);
+
+    const loadingServiceSpy = jasmine.createSpyObj('LoadingService', [], {
+      isLoading: jasmine.createSpy().and.returnValue(false)
+    });
+    
     await TestBed.configureTestingModule({
-      imports: [LayoutComponent]
+      imports: [
+        LayoutComponent,
+        NoopAnimationsModule
+      ],
+      providers: [
+        { provide: LayoutService, useValue: layoutServiceSpy },
+        { provide: LoadingService, useValue: loadingServiceSpy }
+      ]
     })
     .compileComponents();
 
@@ -17,7 +34,7 @@ describe('LayoutComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('deve criar o componente', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutService } from '../../services/layout.service';
 
 import { ToolbarComponent } from './toolbar.component';
 
@@ -7,8 +9,16 @@ describe('ToolbarComponent', () => {
   let fixture: ComponentFixture<ToolbarComponent>;
 
   beforeEach(async () => {
+    const layoutServiceSpy = jasmine.createSpyObj('LayoutService', ['toggle']);
+    
     await TestBed.configureTestingModule({
-      imports: [ToolbarComponent]
+      imports: [
+        ToolbarComponent,
+        NoopAnimationsModule
+      ],
+      providers: [
+        { provide: LayoutService, useValue: layoutServiceSpy }
+      ]
     })
     .compileComponents();
 
@@ -17,7 +27,7 @@ describe('ToolbarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('deve criar o componente', () => {
     expect(component).toBeTruthy();
   });
 });

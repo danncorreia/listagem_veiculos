@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { NavListComponent } from './nav-list.component';
 
@@ -8,7 +10,11 @@ describe('NavListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavListComponent]
+      imports: [
+        NavListComponent,
+        NoopAnimationsModule,
+        RouterTestingModule
+      ]
     })
     .compileComponents();
 
@@ -17,7 +23,7 @@ describe('NavListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('deve criar o componente', () => {
     expect(component).toBeTruthy();
   });
 });
