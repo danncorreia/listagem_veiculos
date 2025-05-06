@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.error-container {
+  text-align: center;
+}
+
+.error-code {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #f44336;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+button {
+  margin-top: 1rem;
+}

@@ -1,0 +1,12 @@
+[
+  { "id": 1, "placa": "ABC-0001", "chassi": "CHASSI1", "renavam": "10000000000", "modelo": "Modelo 1", "marca": "Marca 1", "ano": 2001 },
+  { "id": 2, "placa": "ABC-0002", "chassi": "CHASSI2", "renavam": "10000000001", "modelo": "Modelo 2", "marca": "Marca 2", "ano": 2002 },
+  { "id": 3, "placa": "ABC-0003", "chassi": "CHASSI3", "renavam": "10000000002", "modelo": "Modelo 3", "marca": "Marca 3", "ano": 2003 },
+  { "id": 4, "placa": "ABC-0004", "chassi": "CHASSI4", "renavam": "10000000003", "modelo": "Modelo 4", "marca": "Marca 1", "ano": 2004 },
+  { "id": 5, "placa": "ABC-0005", "chassi": "CHASSI5", "renavam": "10000000004", "modelo": "Modelo 5", "marca": "Marca 2", "ano": 2005 },
+  { "id": 6, "placa": "ABC-0006", "chassi": "CHASSI6", "renavam": "10000000005", "modelo": "Modelo 1", "marca": "Marca 3", "ano": 2006 },
+  { "id": 7, "placa": "ABC-0007", "chassi": "CHASSI7", "renavam": "10000000006", "modelo": "Modelo 2", "marca": "Marca 1", "ano": 2007 },
+  { "id": 8, "placa": "ABC-0008", "chassi": "CHASSI8", "renavam": "10000000007", "modelo": "Modelo 3", "marca": "Marca 2", "ano": 2008 },
+  { "id": 9, "placa": "ABC-0009", "chassi": "CHASSI9", "renavam": "10000000008", "modelo": "Modelo 4", "marca": "Marca 3", "ano": 2009 },
+  { "id": 10, "placa": "ABC-0010", "chassi": "CHASSI10", "renavam": "10000000009", "modelo": "Modelo 5", "marca": "Marca 1", "ano": 2010 }
+]

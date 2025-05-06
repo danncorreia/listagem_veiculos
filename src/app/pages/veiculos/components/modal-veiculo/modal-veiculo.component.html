@@ -1,0 +1,58 @@
+<span class="titulo">{{ titulo }}</span>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="row">
+    <mat-form-field appearance="outline" class="flex-field">
+      <mat-label>Placa</mat-label>
+      <input matInput formControlName="placa" placeholder="ABC-1234" mask="AAA-0000" [dropSpecialCharacters]="false" />
+      @if(form.get('placa')?.invalid && form.get('placa')?.touched) {
+        <mat-error>{{ getErrorMessage('placa') }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="flex-field">
+      <mat-label>Chassi</mat-label>
+      <input matInput formControlName="chassi"/>
+      @if(form.get('chassi')?.invalid && form.get('chassi')?.touched) {
+        <mat-error>{{ getErrorMessage('chassi') }}</mat-error>
+      }
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field appearance="outline" class="flex-field">
+      <mat-label>Renavam</mat-label>
+      <input matInput formControlName="renavam" />
+      @if(form.get('renavam')?.invalid && form.get('renavam')?.touched) {
+        <mat-error>{{ getErrorMessage('renavam') }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="flex-field">
+      <mat-label>Modelo</mat-label>
+      <input matInput formControlName="modelo" />
+      @if(form.get('modelo')?.invalid && form.get('modelo')?.touched) {
+        <mat-error>{{ getErrorMessage('modelo') }}</mat-error>
+      }
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field appearance="outline" class="flex-field">
+      <mat-label>Marca</mat-label>
+      <input matInput formControlName="marca" />
+      @if(form.get('marca')?.invalid && form.get('marca')?.touched) {
+        <mat-error>{{ getErrorMessage('marca') }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="flex-field">
+      <mat-label>Ano</mat-label>
+      <input matInput formControlName="ano" readonly />
+      <input style="display: none;" matInput [matDatepicker]="yearPicker" />
+      <mat-datepicker #yearPicker startView="multi-year" panelClass="year-picker" (yearSelected)="chosenYearHandler($event)"></mat-datepicker>
+      <mat-datepicker-toggle matSuffix [for]="yearPicker"></mat-datepicker-toggle>
+      @if(form.get('ano')?.invalid && form.get('ano')?.touched) {
+        <mat-error>{{ getErrorMessage('ano') }}</mat-error>
+      }
+    </mat-form-field>
+  </div>
+  <div class="buttons">
+    <button mat-button type="button" (click)="onCancel()">Cancelar</button>
+    <button mat-raised-button color="primary" type="submit">Salvar</button>
+  </div>
+</form>

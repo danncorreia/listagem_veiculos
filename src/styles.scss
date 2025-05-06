@@ -1,0 +1,13 @@
+@import "./app/assets/variables";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: $bg-gray; }
+
+.container {
+  height: calc(100vh - 64px);
+}
+
+.content {
+  padding: 1rem;
+  flex: 1;
+}

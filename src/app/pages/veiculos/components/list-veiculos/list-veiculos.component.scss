@@ -1,0 +1,20 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+
+  table {
+    background-color: transparent;
+  }
+  mat-paginator {
+    background-color: transparent;
+  }
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+

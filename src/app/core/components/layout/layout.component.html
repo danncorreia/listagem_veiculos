@@ -1,0 +1,17 @@
+<toolbar></toolbar>
+<mat-sidenav-container class="container">
+  <mat-sidenav class="sidenav" mode="side" [opened]="isOppened" [mode]="isMobile ? 'over' : 'side'"
+    [fixedInViewport]="isMobile" fixedTopGap="56">
+    <nav-list></nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+@if (isLoading) {
+  <div class="loading-overlay">
+    <div class="loading-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+  </div>
+}
